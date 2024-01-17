@@ -13,7 +13,6 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-
 const ContactItem = ({ item, handleDelContacts }) => {
   const handleClick = () => {
     handleDelContacts(item.id);

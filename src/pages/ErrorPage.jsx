@@ -1,5 +1,4 @@
-import * as React from 'react';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 
 import { Section } from 'components';
 
