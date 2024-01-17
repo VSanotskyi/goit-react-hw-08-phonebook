@@ -1,5 +1,4 @@
-import { NavLink } from 'react-router-dom';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 
 import { useAuth } from 'hooks';
 
@@ -7,30 +6,23 @@ const Nav = () => {
   const { authIsLog } = useAuth();
 
   const homeLink = (
-    <Link underline="hover"
-          color="#fff"
-    >
-      <NavLink to="/"
-               style={{ color: 'inherit', textDecoration: 'none' }}
-      >
-        Phonebook
-      </NavLink>
+    <Link to="/">
+      Phonebook
     </Link>
   );
   const contactsLink = (
-    <Link underline="hover"
-          color="#fff"
+    <Link to="/contacts"
     >
-      <NavLink to="/contacts"
-               style={{ color: 'inherit', textDecoration: 'none' }}
-      >
-        Contacts
-      </NavLink>
+      Contacts
     </Link>
   );
 
   return (
     <nav>
+      {contactsLink}
+      <p></p>
+      {homeLink}
+      <p></p>
       {authIsLog ? contactsLink : homeLink}
     </nav>
   );

@@ -1,10 +1,9 @@
-import Button from '@mui/material/Button';
-import css from './ContactItem.module.css';
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -46,13 +45,6 @@ const ContactItem = ({ item, handleDelContacts }) => {
         </Grid>
       </Box>
     </li>
-    // <div className={css.wrapper}>
-    //   <p className={css.text}>{item.name}</p>
-    //   <p className={css.text}>{item.number}</p>
-    //   <Button variant="contained"
-    //           onClick={handleClick}
-    //   >Delete</Button>
-    // </div>
   );
 };
 

@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
 
 import { useAuth } from 'hooks';
 import { logoutThunk } from 'store/auth';
 import css from './UserMenu.module.css';
-import Button from '@mui/material/Button';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
