@@ -1,6 +1,7 @@
+import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import Link from '@mui/material/Link';
 
+import Link from '@mui/material/Link';
 import { useAuth } from 'hooks';
 
 const Nav = () => {
