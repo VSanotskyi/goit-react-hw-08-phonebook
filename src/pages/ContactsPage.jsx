@@ -33,9 +33,9 @@ export default function ContactsPage() {
   return (
     <Section title="Contacts">
       <AddContactForm handleAddContact={handleAddContact} />
-      {contactsItems && <ContactsList contactsItems={contactsItems}
-                                      handleDelContacts={handleDelContacts}
-                                      handleFilter={handleFilter}
+      {contactsItems.length > 0 && <ContactsList contactsItems={contactsItems}
+                                                 handleDelContacts={handleDelContacts}
+                                                 handleFilter={handleFilter}
       />}
     </Section>
   );
