@@ -32,7 +32,7 @@ export default function HomePage() {
         >
           <NavLink style={{ color: 'inherit', textDecoration: 'none' }}
                    to="/login"
-          >Already on phonebook? log In</NavLink>
+          >Already on phonebook? Sign in</NavLink>
         </Link>
         <span>or</span>
         <Link underline="hover"

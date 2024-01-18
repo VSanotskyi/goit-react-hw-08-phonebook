@@ -55,6 +55,7 @@ const AddContactForm = ({ handleAddContact }) => {
           }}
         >
           <TextField
+            required
             type="name"
             value={contact.name}
             name="name"
@@ -64,6 +65,7 @@ const AddContactForm = ({ handleAddContact }) => {
             onChange={handleChange}
           />
           <TextField
+            required
             type="tel"
             value={contact.number}
             name="number"

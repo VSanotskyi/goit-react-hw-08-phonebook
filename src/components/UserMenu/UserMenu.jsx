@@ -20,7 +20,7 @@ const UserMenu = () => {
       <p className={css.username}>Welcome, {authUser.name}</p>
       <Button variant="contained"
               onClick={handleClick}
-      >Logout</Button>
+      >Sign out</Button>
     </div>
   );
 };

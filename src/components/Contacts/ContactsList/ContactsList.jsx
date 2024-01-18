@@ -1,4 +1,4 @@
-import { ContactItem, FindContactForm } from 'components';
+import { ContactItem } from 'components';
 
 const style = {
   display: 'grid',
@@ -6,21 +6,19 @@ const style = {
   gridGap: '10px',
 };
 
-const ContactsList = ({ contactsItems, handleDelContacts, handleFilter }) => {
-    return (
-      <div>
-        <FindContactForm handleFilter={handleFilter} />
-        <ul style={style}>{
-          contactsItems.map(item => <ContactItem
-              key={item.id}
-              item={item}
-              handleDelContacts={handleDelContacts}
-            />,
-          )
-        }</ul>
-      </div>
-    );
-  }
-;
+const ContactsList = ({ contactsItems, handleDelContacts }) => {
+  return (
+    <div>
+      <ul style={style}>{
+        contactsItems.map(item => <ContactItem
+            key={item.id}
+            item={item}
+            handleDelContacts={handleDelContacts}
+          />,
+        )
+      }</ul>
+    </div>
+  );
+};
 
 export { ContactsList };

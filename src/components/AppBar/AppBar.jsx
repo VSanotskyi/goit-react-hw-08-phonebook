@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Container from '@mui/material/Container';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -17,7 +18,9 @@ export default function ButtonAppBar() {
                       component="div"
                       sx={{ flexGrow: 1 }}
           >
-            <Nav />
+            <Container>
+              <Nav />
+            </Container>
           </Typography>
           {authIsLog && <UserMenu />}
         </Toolbar>

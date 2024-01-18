@@ -1,11 +1,16 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { AddContactForm, ContactsList, Section } from 'components';
+import {
+  AddContactForm,
+  ContactsList,
+  FindContactForm,
+  Section,
+} from 'components';
 import {
   addContactThunk,
   delContactThunk,
-  getAllContactsThunk,
+  getAllContactsThunk, selectFilter, selectItems,
   selectVisibleContacts,
   setFilterAction,
 } from 'store/contacts';
@@ -13,6 +18,8 @@ import {
 export default function ContactsPage() {
   const dispatch = useDispatch();
   const contactsItems = useSelector(selectVisibleContacts);
+  const filter = useSelector(selectFilter);
+  const items = useSelector(selectItems);
 
   const handleFilter = (filter) => {
     dispatch(setFilterAction(filter));
@@ -33,10 +40,12 @@ export default function ContactsPage() {
   return (
     <Section title="Contacts">
       <AddContactForm handleAddContact={handleAddContact} />
+      {items.length > 0 && <FindContactForm handleFilter={handleFilter} />}
       {contactsItems.length > 0 && <ContactsList contactsItems={contactsItems}
                                                  handleDelContacts={handleDelContacts}
-                                                 handleFilter={handleFilter}
       />}
+      {!filter && contactsItems.length === 0 && <p>No contacts</p>}
+      {filter && contactsItems.length === 0 && <p>Not found</p>}
     </Section>
   );
 };
