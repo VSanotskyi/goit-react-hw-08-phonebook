@@ -94,7 +94,6 @@ const SignUp = ({ handleSignUp }) => {
                     sm={6}
               >
                 <TextField
-                  required
                   fullWidth
                   id="lastName"
                   label="Last Name"
