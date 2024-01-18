@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[430],{2430:function(e,r,t){t.r(r),t.d(r,{default:function(){return u}});var n=t(1087),o=t(7753),c=t(184);function u(){return(0,c.jsx)(o.$0,{title:"Error, page not defined :(",children:(0,c.jsx)(n.rU,{to:"./",underline:"hover",color:"#1976d2",children:"Go home"})})}}}]);
-//# sourceMappingURL=430.0b304db9.chunk.js.map
