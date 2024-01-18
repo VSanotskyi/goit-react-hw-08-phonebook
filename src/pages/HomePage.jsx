@@ -14,6 +14,7 @@ const style = {
   },
   title: {
     padding: '20px',
+    textAlign: 'center',
   },
   link: {
     textDecoration: 'none',
