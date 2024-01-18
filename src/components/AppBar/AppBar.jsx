@@ -4,8 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import { Nav } from '../Nav/Nav';
-import { UserMenu } from '../UserMenu/UserMenu';
+import { Nav, UserMenu } from 'components';
 import { useAuth } from 'hooks';
 
 export default function ButtonAppBar() {

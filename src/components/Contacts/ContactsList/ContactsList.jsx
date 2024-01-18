@@ -1,11 +1,16 @@
 import { ContactItem, FindContactForm } from 'components';
-import css from './ContactsList.module.css';
+
+const style = {
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  gridGap: '10px',
+};
 
 const ContactsList = ({ contactsItems, handleDelContacts, handleFilter }) => {
     return (
       <div>
         <FindContactForm handleFilter={handleFilter} />
-        <ul className={css.list}>{
+        <ul style={style}>{
           contactsItems.map(item => <ContactItem
               key={item.id}
               item={item}

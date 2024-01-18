@@ -33,11 +33,11 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-export default function SignUp({ handleSignUp }) {
+const SignUp = ({ handleSignUp }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    
+
     handleSignUp({
       name: `${data.get('firstName')} ${data.get('lastName')}`,
       email: data.get('email'),
@@ -150,4 +150,7 @@ export default function SignUp({ handleSignUp }) {
       </Container>
     </ThemeProvider>
   );
-}
+};
+
+
+export { SignUp };

@@ -15,6 +15,10 @@ const style = {
   title: {
     padding: '20px',
   },
+  link: {
+    textDecoration: 'none',
+    color: '#fff',
+  },
 };
 
 export default function HomePage() {
@@ -38,7 +42,6 @@ export default function HomePage() {
           >Registration</NavLink>
         </Link>
       </div>
-
     </Section>
   );
 };

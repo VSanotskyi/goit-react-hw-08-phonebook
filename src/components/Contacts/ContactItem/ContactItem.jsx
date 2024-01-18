@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -22,10 +23,11 @@ const ContactItem = ({ item, handleDelContacts }) => {
     <li>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container
+              style={{ display: 'flex' }}
               spacing={3}
         >
           <Grid item
-                xs
+                xs={4}
           >
             <Item>{item.name}</Item>
           </Grid>
@@ -37,7 +39,11 @@ const ContactItem = ({ item, handleDelContacts }) => {
           <Grid item
                 xs
           >
-            <Button variant="contained"
+            <Button variant="outlined"
+                    color="error"
+                    startIcon={<DeleteIcon />}
+                    style={{ width: '172px', height: '36px' }}
+                    size="medium"
                     onClick={handleClick}
             >Delete</Button>
           </Grid>
@@ -46,5 +52,24 @@ const ContactItem = ({ item, handleDelContacts }) => {
     </li>
   );
 };
+
+// <Grid item
+//                 xs={10}
+//           >
+//             <Item>{item.name} {item.number}</Item>
+//           </Grid>
+//           <Grid item
+//                 xs={6}
+//           >
+//             <Item>{item.number}</Item>
+//           </Grid>
+//           <Grid item
+//                 xs
+//           >
+//             <Button variant="contained"
+//                     onClick={handleClick}
+//
+//             ><DeleteIcon /> Delete</Button>
+//           </Grid>
 
 export { ContactItem };

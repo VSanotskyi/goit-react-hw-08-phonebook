@@ -1,14 +1,18 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Link from '@mui/material/Link';
 
 import { Section } from 'components';
 
 export default function ErrorPage() {
   return (
     <Section title="Error, page not defined :(">
-      <Link to="./"
-            underline="hover"
+      <Link underline="hover"
             color="#1976d2"
-      >Go home
+      >
+        <NavLink to="/"
+                 style={{ color: 'inherit', textDecoration: 'none' }}
+        >Go home
+        </NavLink>
       </Link>
     </Section>
   );
