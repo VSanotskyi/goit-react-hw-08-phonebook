@@ -7,24 +7,26 @@ import { useAuth } from 'hooks';
 import { useState } from 'react';
 
 export default function LoginPage() {
-  const [isErr, setIsErr] = useState(false);
+  const [isShowError, setIsShowError] = useState(false);
   const dispatch = useDispatch();
-  const { authError } = useAuth(setIsErr);
+  const { authError } = useAuth();
 
   const handleSigIn = (data) => {
-    dispatch(loginThunk(data));
     if (authError) {
-      setIsErr(true);
+      setIsShowError(true);
       setTimeout(() => {
-        setIsErr(false);
+        setIsShowError(false);
       }, 2000);
     }
+
+    dispatch(loginThunk(data));
   };
 
   return (
     <Section>
-      {isErr &&
-        <Alert severity="error">This is an error Alert.</Alert>}
+      {isShowError &&
+        <Alert severity="error">
+          Error! User not found or incorrect password</Alert>}
       <SignIn handleSigIn={handleSigIn} />
       {/*<LoginForm />*/}
     </Section>

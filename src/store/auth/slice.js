@@ -25,6 +25,7 @@ const handleAuthOffFulfilled = (state) => {
 };
 
 const handleRejected = (state, { payload }) => {
+  console.log('rejected');
   state.token = null;
   state.user = null;
   state.isLog = false;

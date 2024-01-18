@@ -12,13 +12,14 @@ export default function RegistrationPage() {
   const { authError } = useAuth();
 
   const handleSignUp = (data) => {
-    dispatch(regThunk(data));
     if (authError) {
       setIsShowError(true);
       setTimeout(() => {
         setIsShowError(false);
       }, 2000);
     }
+
+    dispatch(regThunk(data));
   };
 
   return (
