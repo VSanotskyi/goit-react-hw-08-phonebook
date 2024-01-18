@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Alert } from '@mui/material';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 import { selectAllContacts } from 'store/contacts';
 
@@ -73,7 +74,7 @@ const AddContactForm = ({ handleAddContact }) => {
           />
           <Button type="submit"
                   variant="contained"
-          >Add contact</Button>
+          ><PersonAddIcon /></Button>
         </Box>
       </form>
     </>
